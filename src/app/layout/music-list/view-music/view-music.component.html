@@ -1,0 +1,54 @@
+<div class="flex items-center justify-center">
+  <div class="lg:w-1/3 md:w-1/2 sm-w-full">
+    <div class="w-full h-full flex flex-col justify-start items-start gap-6">
+      <div class="w-full grid grid-cols-3 p-5">
+        <div class="w-full flex justify-start items-center ">
+          <app-button [icon]="faArrowLeft" routerLink="/" />
+        </div>
+        <div class="text-center flex justify-center items-center">
+          <span class=" w-full text-gray-400 font-semibold min-w-full text-center">PLAYING NOW</span>
+        </div>
+        <div class="w-full flex justify-end items-center ">
+          <app-button [icon]="faBars" />
+        </div>
+      </div>
+      <div class="w-full flex justify-center items-center">
+        <div class="w-full h-full  rounded-full border-1 p-1 border-gray-300 outer opacity-80 rotate">
+          <img src="./channels4_profile.jpg" class="object-contain rounded-full shadow button" alt="" srcset="" >
+        </div>
+      </div>
+    </div>
+    <div class="w-full p-2 flex flex-col justify-center  items-center ">
+     <div class="">
+      <h1 class="text-gray-400 h">Lose it</h1>
+     </div>
+     <div class="">
+      <p class="text-gray-400 h-7">Flume for playing music</p>
+     </div>
+     <div class="flex justify-between w-full">
+      <span class="text-gray-400">1.53</span>
+      <span class="text-gray-400">2.53</span>
+     </div>
+     <div class="w-full">
+      
+      <mat-slider  class="w-full">
+        <input matSliderThumb class="w-full" value="50">
+      </mat-slider>
+      
+     </div>
+     <div class="w-full flex justify-around items-center ">
+      
+       <app-button [icon]="faBackward" size="h-24 w-24" BtnSize="h-20 w-20"/>
+       <app-button [icon]="faPause" size="h-24 w-24" BtnSize="h-20 w-20" [active]="true"/>
+       <app-button [icon]="faForward" size="h-24 w-24" BtnSize="h-20 w-20"/>
+      
+         <!-- <div class="flex justify-end">
+      </div>
+      <div class="flex justify-start">
+      </div> -->
+
+     </div>
+    </div>
+  </div>
+
+</div>

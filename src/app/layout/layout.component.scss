@@ -1,0 +1,14 @@
+.h-full {
+       height: clamp(50%, 100%, 100vh);
+       // overflow-y: scroll;
+
+
+}
+
+.background {
+       background-image: linear-gradient(to bottom, rgb(188, 209, 234), rgb(229, 232, 234), rgb(191, 208, 232));
+       height: 100vh !important;
+       max-height: 100vh;
+       overflow: hidden;
+
+}

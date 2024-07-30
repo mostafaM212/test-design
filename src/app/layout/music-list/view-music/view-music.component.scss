@@ -1,0 +1,84 @@
+:host {
+       .outer {
+              box-shadow: 6px 15px 6px white inset;
+       }
+
+       .shadow {
+              box-shadow: 10px 15px 10px #888888
+       }
+
+       .item {
+              transform: scale(1);
+              transition: all .2s ease;
+
+              &:hover {
+                     transform: scale(1.05);
+                     background-color: rgba(0, 0, 0, .1);
+                     cursor: pointer;
+              }
+       }
+}
+
+.rotate {
+       height: 250px;
+       width: 250px;
+       animation: rotate 20s ease-in-out 6s infinite;
+}
+
+.h {
+       font-size: 2rem;
+}
+
+.wrapper {
+       width: 500px;
+}
+
+.progress-bar {
+       width: 100%;
+       background-color: #e0e0e0;
+       padding: 3px;
+       border-radius: 3px;
+       box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.progress-bar-fill {
+       display: block;
+       height: 22px;
+       background-color: #659cef;
+       border-radius: 3px;
+
+       transition: width 500ms ease-in-out;
+}
+
+mat-slider {
+       width: 100% !important;
+}
+
+@keyframes rotate {
+       0% {
+              transform: rotate(0deg);
+       }
+
+       50% {
+              transform: rotate(360deg);
+
+       }
+
+       100% {
+              transform: rotate(0deg);
+
+       }
+}
+
+@media (max-width: 768px) {
+       .height {
+              height: 30vh !important;
+       }
+}
+
+@media (min-width: 1000px) {
+       .height {
+              height: 100vh !important;
+              overflow-y: auto;
+       }
+}

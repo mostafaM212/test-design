@@ -1,0 +1,66 @@
+:host {
+       .outer {
+              box-shadow: 2px 5px 2px white inset;
+       }
+
+       .shadow {
+              box-shadow: 5px 10px 8px #888888
+       }
+
+       .item {
+              transform: scale(1);
+              transition: all .2s ease;
+
+              &:hover {
+                     transform: scale(1.05);
+                     background-color: rgba(0, 0, 0, .1);
+                     cursor: pointer;
+              }
+       }
+
+       // .active {
+       //        transform: scale(1.05);
+       //        background-color: rgba(0, 0, 0, .1);
+       // }
+       // .button {
+       //        transform: rotate(0deg);
+       //        transition: 5.5s ease-in;
+
+       //        &:hover {
+       //               transform: rotate(360deg);
+       //        }
+       // }
+}
+
+.rotate {
+       animation: rotate 20s ease-in-out 6s infinite;
+}
+
+@keyframes rotate {
+       0% {
+              transform: rotate(0deg);
+       }
+
+       50% {
+              transform: rotate(360deg);
+
+       }
+
+       100% {
+              transform: rotate(0deg);
+
+       }
+}
+
+@media (max-width: 768px) {
+       .height {
+              height: 30vh !important;
+       }
+}
+
+@media (min-width: 1000px) {
+       .height {
+              height: 100vh !important;
+              overflow-y: auto;
+       }
+}

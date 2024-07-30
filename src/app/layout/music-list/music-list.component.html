@@ -1,0 +1,33 @@
+<div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 items-center justify-center">
+  <div class="w-full h-full py-8 flex flex-col justify-start items-start gap-6">
+    <span class="h-11 w-full text-gray-400 min-w-full font-semibold text-center">SKIN - FLUME</span>
+    <!-- <div class="w-full">
+    </div> -->
+    <div class="w-full grid grid-cols-3 justify-between items-center">
+      <div class="w-full flex justify-center items-center ">
+        <app-button [icon]="faHeart"/>
+      </div>
+      <div class="w-full h-full  rounded-full border-1 p-1 border-gray-300 outer opacity-80 rotate">
+        <img src="./channels4_profile.jpg" class="object-contain rounded-full shadow button" alt="" srcset="" >
+      </div>
+      <div class="w-full flex justify-center items-center ">
+        <app-button [icon]="faEllipsis"/>
+      </div>
+    </div>
+  </div>
+  <div class="w-full p-8 flex flex-col justify-center  items-start h-full   overflow-y-auto ">
+    @for (song of songs; track $index) {
+      <div class="w-full rounded-lg flex justify-between my-1 item px-3 py-5" [ngClass]="{'active': song.play }" routerLink="/view/1">
+        <div class="flex flex-col justify-start items-center h-10 w-full">
+          <span class=" text-start w-full capitalize  h-12 text-gray-400 font-semibold min-w-full ">{{song.name}}</span>
+          <span class="h-16 text-gray-400  capitalize text-start font-light min-w-full">Flume - {{song.name}}</span>
+        </div>
+        <div class="w-full flex justify-end items-center ">
+          <app-button [icon]="!song.play ? faPlay : faPause" [active]="song.play"/>
+        </div>
+
+      </div>
+    }
+  </div>
+
+</div>

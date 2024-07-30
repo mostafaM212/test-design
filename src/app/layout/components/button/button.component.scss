@@ -1,0 +1,18 @@
+:host {
+       .outer {
+              box-shadow: 2px 5px 2px white inset;
+       }
+
+       .shadow {
+              box-shadow: 5px 10px 8px #888888
+       }
+}
+
+.button {
+       transform: rotateY(0deg);
+       transition: .5s ease-in;
+
+       &:hover {
+              transform: rotateY(360deg);
+       }
+}
